@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post 'lists' => 'lists#create'
   get 'lists'=> 'lists#index'
   #.../list/1や.../list/3に該当する
-  get 'lists/:id'=> 'lists#show',as:'list'
-  get 'lists/:id/edit' => 'lists#edit', as:'edit_list'
-  patch 'lists/:id' => 'lists#update',as:'update_list'
+  get 'lists/:id'=> 'lists#show',as: 'list'
+  get 'lists/:id/edit' => 'lists#edit', as: 'edit_list'
+  patch 'lists/:id' => 'lists#update',as: 'update_list'
+  delete 'lists/:id' => 'lists#destroy', as: 'destroy_list'
+
 end
