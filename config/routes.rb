@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'lists/:id/edit' => 'lists#edit', as: 'edit_list'
   patch 'lists/:id' => 'lists#update',as: 'update_list'
   delete 'lists/:id' => 'lists#destroy', as: 'destroy_list'
+  get 'todolists' => 'todolists#index'
 
 end
